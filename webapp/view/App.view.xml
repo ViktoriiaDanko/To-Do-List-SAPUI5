@@ -1,0 +1,20 @@
+<mvc:View controllerName="list.ToDoList.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="idAppControl">
+			<pages>
+				<Page title="TO DO LIST" titleAlignment="Center">
+					<content>
+						<HBox justifyContent="Center" class="myButton">
+							<Input value="" placeholder="New task.." id="inputAddTask" liveChange="addTask" class="myInput sapUiTinyMarginEnd" width="700px"/>
+							<Button icon="sap-icon://add" id="addTask" press="onPressAddTask" enabled="false"/>
+						</HBox>
+						<List noDataText="No tasks for now." id="listTodo" inset="true" mode="Delete" delete="onDeleteItem" class="myIcon"/>
+					</content>
+					<footer>
+						<Toolbar width="100%" id="toolbarFooter"></Toolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
